@@ -1,4 +1,4 @@
-# http_status_code
+# get_code_status
 
 Console color display of all http status codes. For those who never remember http codes.
 

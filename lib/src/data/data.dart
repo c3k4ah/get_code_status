@@ -6,6 +6,12 @@ class Data {
   final String _data = """
 [
     {
+        "code": 0,
+        "status":"Unknown",
+        "notes":"Unknown"
+     
+    },
+    {
         "code": 100,
         "status":"",
         "notes":"Continue"

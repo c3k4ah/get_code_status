@@ -1,6 +1,6 @@
 name: get_code_status
 description: a dart package that interprets status codes.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/c3k4ah/get_code_status
 repository: https://github.com/c3k4ah/get_code_status
 

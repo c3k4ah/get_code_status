@@ -1,13 +1,13 @@
 part of 'get_code.dart';
 
-class StatusCode {
+class StatusCodeModel {
   int? code;
   String? status;
   String? notes;
 
-  StatusCode({this.code, this.status, this.notes});
+  StatusCodeModel({this.code, this.status, this.notes});
 
-  StatusCode.fromJson(Map<String, dynamic> json) {
+  StatusCodeModel.fromJson(Map<String, dynamic> json) {
     code = json['code'];
     status = json['status'];
     notes = json['notes'];

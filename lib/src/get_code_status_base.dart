@@ -1,15 +1,16 @@
 part of 'get_code.dart';
 
 class GetCodeStatus {
-  void code(int code) {
+  DataCode data = DataCode();
+  void printCodeStatus(int code) {
     PrintColor printColor = PrintColor();
-    DataCode status = DataCode();
-//-----------------------------------------------------------------------------
-    final index1 =
-        status.getFromJson().indexWhere((element) => element.code == code);
 
-    if (!index1.isNegative) {
-      var stat = status.getFromJson().elementAt(index1);
+//-----------------------------------------------------------------------------
+    final index =
+        data.getFromJson().indexWhere((element) => element.code == code);
+
+    if (!index.isNegative) {
+      var stat = data.getFromJson().elementAt(index);
 
       String message = "[${stat.code}] [${stat.status}], ${stat.notes}";
 
@@ -26,6 +27,19 @@ class GetCodeStatus {
       }
     } else {
       print('\x1B[36m Unknow status code \x1B[0m');
+    }
+  }
+
+  StatusCodeModel codeStatusToString(int code) {
+    final index =
+        data.getFromJson().indexWhere((element) => element.code == code);
+
+    if (!index.isNegative) {
+      var stat = data.getFromJson().elementAt(index);
+
+      return stat;
+    } else {
+      return data.getFromJson().elementAt(0);
     }
   }
 }

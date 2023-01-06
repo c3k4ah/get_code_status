@@ -2,10 +2,10 @@ part of 'get_code.dart';
 
 class DataCode {
   final Data _data = Data();
-  List<StatusCode> getFromJson() {
+  List<StatusCodeModel> getFromJson() {
     var myData = json.decode(_data.getData) as List;
-    List<StatusCode> status = myData.map((item) {
-      return StatusCode.fromJson(item);
+    List<StatusCodeModel> status = myData.map((item) {
+      return StatusCodeModel.fromJson(item);
     }).toList();
 
     return status;
